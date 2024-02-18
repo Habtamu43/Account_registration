@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>Welcome to Your Profile</h1>
+    <p>Hello, {{ user.username }}!</p>
+    <p>This is your profile/dashboard page.</p>
+    <!-- You can add more information or features specific to the user's profile here -->
+    
+    <!-- Add a logout link -->
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
+
